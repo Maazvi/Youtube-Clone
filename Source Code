@@ -1,0 +1,573 @@
+<html>
+<head>
+    <title>Youtube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .All {
+            width: 100%;
+            height: 100%;
+        }
+
+        .Header {
+            display: grid;
+            grid-template-rows: 60px;
+            grid-template-columns: 230px 686px 380px;
+            width: 1340px;
+            height: 60px;
+            background-color: white;
+            border-bottom: solid rgb(220, 220, 220) 1px;
+            gap: 20px;
+        }
+
+        .Body {
+            display: flex;
+            flex-direction: row;
+            width: 1200px;
+            height: 1200px;
+        }
+
+        .Menu {
+            display: grid;
+            grid-template-columns: 67px;
+            grid-template-rows: repeat(6, 70px);
+            width: 67px;
+            height: 100%;
+            background-color: white;
+            border-right: solid rgb(220, 220, 220) 1px;
+            margin-left: 7px;
+            row-gap: 13px;
+        }
+
+        .Content {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+            margin-left: 50px;
+            background-color: whites;
+            grid-template-columns: repeat(3, 323px);
+            grid-template-rows: repeat(6, 296px);
+            gap: 40px;
+        }
+
+        .thumb1 {
+            width: 315.33px;
+            height: 176.92px;
+        }
+
+        .channel-1 {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 100%;
+            margin-top: 12px;
+        }
+
+        .Description {
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            color: black;
+            font-size: 14px;
+        }
+
+        .Rightside {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .Description2 {
+            color: #606060;
+            font-size: 12px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 14px;
+        }
+
+        .Birder {
+            margin-top: 13px;
+            margin-left: 6px;
+        }
+
+        .Description3 {
+            color: #606060;
+            font-size: 12px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: 4px;
+        }
+
+        .buttonhome {
+            width: 52px;
+            height: 52px;
+            background-color: white;
+            border: none;
+            transition: opacity 1s;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Home {
+            width: 26px;
+            height: 26px;
+        }
+
+        .buttonhome:hover {
+            cursor: pointer;
+            background-color: #f0ecec;
+        }
+
+        .Button-home {
+            display: flex;
+            flex-direction: row;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .texthome {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 10px;
+            align-items: center;
+        }
+
+        .Burger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Buregermenu {
+            width: 24px;
+            height: 24px;
+        }
+
+        .Menubutton {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border: none;
+        }
+
+        .Menubutton:hover {
+            cursor: pointer;
+        }
+
+        .firstgrid {
+            display: grid;
+            grid-template-columns: 60px 170px;
+            grid-template-rows: 60px;
+        }
+
+        .youtubee {
+            width: 90px;
+            height: 20px;
+            margin-right: 60px;
+            margin-left: 10px;
+            margin-top: 18px;
+        }
+
+        .search-bar {
+            font-size: 14px;
+            height: 40px;
+            width: 358px;
+            border: 2px solid #ccc;
+        }
+
+        .secondgrid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .searchbutton {
+            width: 64px;
+            height: 40px;
+            border: 2px solid #ccc;
+            border-left: none;
+        }
+
+        .search {
+            width: 24px;
+            height: 24px;
+        }
+
+        .searchbutton:hover {
+            cursor: pointer;
+        }
+
+        .voicebuttton {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            border: none;
+            margin-left: 14px;
+        }
+
+        .Voice {
+            width: 24px;
+            height: 24px;
+        }
+
+        .voicebuttton:hover {
+            cursor: pointer;
+        }
+
+        .lastgrid {
+            display: grid;
+            grid-template-columns: repeat(4, 95px);
+            grid-template-rows: 60px;
+        }
+
+        .Uploadbutton {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border: none;
+        }
+
+        .Upload {
+            width: 24px;
+            height: 24px;
+        }
+
+        .uploaddiv {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .Uploadbutton:hover {
+            cursor: pointer;
+        }
+
+        .uploaddiv1 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .uploaddiv2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .uploaddiv3 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .Uploadbutton1 {
+            background-color: white;
+            border: none;
+            margin-left: 25px;
+        }
+
+        .Uploadbutton1:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="All">
+        <div class="Header">
+            <div class="firstgrid">
+                <div class="Burger">
+                    <button class="Menubutton">
+                        <img class="Buregermenu" src="hamburger-menu.svg">
+                    </button>
+                </div>
+                <div class="youtubeee">
+                    <button class="Menubutton">
+                        <img class="youtubee" src="youtube-logo.svg">
+                    </button>
+                </div>
+            </div>
+            <div class="secondgrid">
+                <input class="search-bar" type="text" placeholder="Search...">
+                <button class="searchbutton">
+                    <img class="search" src="search.svg">
+                </button>
+                <button class="voicebuttton">
+                    <img class="Voice" src="voice-search-icon.svg">
+                </button>
+            </div>
+            <div class="lastgrid">
+                <div class="uploaddiv">
+                    <button class="Uploadbutton">
+                        <img class="Upload" src="upload.svg">
+                    </button>
+                </div>
+                <div class="uploaddiv1">
+                    <button class="Uploadbutton1">
+                        <img class="Upload" src="youtube-apps.svg">
+                    </button>
+                </div>
+                <div class="uploaddiv2">
+                    <button class="Uploadbutton">
+                        <img class="Upload" src="notifications.svg">
+                    </button>
+                </div>
+                <div class="uploaddiv3">
+                    <button class="Uploadbutton">
+                        <img class="Upload" src="channel-5.jpeg">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="Body">
+            <div class="Menu">
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="home (1).svg">
+                            <p class="texthome">Home</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="explore.svg">
+                            <p class="texthome">Explore</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="subscriptions.svg">
+                            <p class="texthome">Subscribe</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="originals.svg">
+                            <p class="texthome">Orignals</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="youtube-music.svg">
+                            <p class="texthome">Youtube Music</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Button-home">
+                    <div>
+                        <button class="buttonhome">
+                            <img class="Home" src="library.svg">
+                            <p class="texthome">library</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="Content">
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumb1.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-1.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Talking Tech and AI with Google CEO Sundar Pichai!
+                            </div>
+                            <div class="Description2">
+                                Marques Brownlee
+                            </div>
+                            <div class="Description3">
+                                3.5M views . 6 months ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-2.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-2.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Try Not To Laugh #9
+                            </div>
+                            <div class="Description2">
+                                Markiplier
+                            </div>
+                            <div class="Description3">
+                                3.5M views . 6 months ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-3.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-3.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Crazy Tik Toks Taken Moments Before DISASTER
+                            </div>
+                            <div class="Description2">
+                                SSSniperWolf
+                            </div>
+                            <div class="Description3">
+                                12M views . 1 years ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-4.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-4.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                The Simplest Math Problem No One Can Solve - Collatz Conjecture
+                            </div>
+                            <div class="Description2">
+                                Veritasium
+                            </div>
+                            <div class="Description3">
+                                18M views . 4 months ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-5.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-5.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Kadane's Algorithm to Maximum Sum Subarray Problem
+                            </div>
+                            <div class="Description2">
+                                CS Dojo
+                            </div>
+                            <div class="Description3">
+                                3.5M views . 6 months ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-6.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-6.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Anything You Can Fit In The Circle I’ll Pay For
+                            </div>
+                            <div class="Description2">
+                                MrBeast
+                            </div>
+                            <div class="Description3">
+                                141M views · 1 year ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-7.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-7.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Why Planes Don't Fly Over Tibet
+                            </div>
+                            <div class="Description2">
+                                RealLifeLore
+                            </div>
+                            <div class="Description3">
+                                6.6M views · 1 year ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-8.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-8.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                Inside The World's Biggest Passenger Plane
+                            </div>
+                            <div class="Description2">
+                                Tech Vision
+                            </div>
+                            <div class="Description3">
+                                3.7M views · 10 months ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first">
+                    <div>
+                        <img class="thumb1" src="thumbnail-12.webp">
+                    </div>
+                    <div class="Rightside">
+                        <div>
+                            <img class="channel-1" src="channel-12.jpeg">
+                        </div>
+                        <div class="Birder">
+                            <div class="Description">
+                                What would happen if you didn’t drink water? - Mia Nacamulli
+                            </div>
+                            <div class="Description2">
+                                TED-Ed
+                            </div>
+                            <div class="Description3">
+                                12M views · 5 years ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
